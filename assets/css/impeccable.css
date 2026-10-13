@@ -1,0 +1,30 @@
+/* impeccable pass: shared fixes */
+/* audit: replace cream base + radial halos with one calm solid surface */
+body{background-color:#f5f7f9!important;background-image:none!important}
+/* audit: drop the thick side-tab accent, keep a quiet full border */
+.service-item{border-left:1px solid #e3eaec!important}
+.note,p.note{border-left:none!important;border:1px solid #e6eaee!important}
+/* polish: readable body text (weight 400, AA+ contrast) */
+.about-text p,.service-item-text,.timeline-text,.pub-cite,address,.contact-link{color:#1f2d3d!important;font-weight:400!important}
+.contact-title{color:#4b5a6b!important}
+/* polish: visible keyboard focus */
+a:focus-visible,button:focus-visible{outline:3px solid #155e75!important;outline-offset:3px;border-radius:6px}
+/* polish: respect reduced motion without killing state */
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+/* adapt: 44px touch targets and room for the fixed mobile nav */
+.social-link{display:inline-flex;min-width:44px;min-height:44px;align-items:center;justify-content:center;font-size:20px}
+@media (max-width:1023px){
+ .navbar-link{min-height:48px;padding:12px 8px!important}
+ main{padding-bottom:96px!important}
+}
+
+/* typeset (academic): steadier body text and sentence-case headings as written in the HTML */
+.about-text p,.service-item-text,.timeline-text{font-size:15.5px!important;line-height:1.8!important}
+.service-title,.service-item-title,.skills-title,.h3,.timeline-item-title{text-transform:none!important}
+/* polish: ORCID iD never breaks mid-number */
+.sidebar .contact-link[href*="orcid"]{white-space:nowrap;font-size:12.5px;letter-spacing:-.1px;overflow:visible!important;text-overflow:clip!important}.sidebar .contact-info{overflow:visible!important;min-width:0}
+/* distill: social icons quieter but tappable */
+.social-list{flex-wrap:wrap;justify-content:center;gap:2px!important}
+.social-link{color:#155e75!important;border-radius:10px}
+.social-link:hover{background:#eaf3f6}
+.pub-item{padding:20px 22px!important}
